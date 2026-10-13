@@ -1,4 +1,4 @@
-import pnglogo from "./logos/sika-low-resolution-logo-color-on-transparent-background.png";
+import pnglogo from "./logos/ELCodes-image.png";
 
 import backend from "./backend.png";
 import creator from "./creator.png";
@@ -6,7 +6,7 @@ import eyeSolid from "./eye-solid.svg";
 import github from "./github.png";
 import linkedin from "./linkedin.svg";
 import mobile from "./mobile.png";
-import quizzical from "./quizzical.png";
+import quizzical from "./quzzit.png";
 import web from "./web.png";
 
 import css from "./tech/css.png";
@@ -26,13 +26,21 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 
 import aimgreen from "./aimgreen_image.png";
+import heraknow from "./heraknow.png";
+import favesneedles from "./favesneedles.png";
+import heraldome from "./heraldome.jpg";
+import heraldsmeal from "./heraldsmeal.png";
+import heraldsmeet from "./HeraldsMeet.png";
+import heraldspay from "./HeraldsPay.jpg";
+import heralds_store from "./heralds-store.png";
+import tulcatiff from "./tulcatiff.png";
 import ef420 from "./ef420.png";
-import cando from "./can-do-app.png";
+import cando from "./canbedone.png";
 import kindocean from "./kindocean_image.png";
 import mertra from "./mertra_image.png";
 import migro_portfolio from "./migro.png";
 import nextAdmin from "./next-admin.png";
-import siktionary from "./siktionary.png";
+import eltionary from "./ELtionary.png";
 import slog from "./slog-desktop.png";
 import sumz from "./sumz.png";
 import yTClone from "./yt-clone.png";
@@ -42,11 +50,21 @@ import evvent from "./companies/evvent-logo.ico";
 import migro from "./companies/migro.png";
 import everse_soft_logo from "./companies/everse_soft_logo.jpeg";
 import byteex_logo from "./companies/byteex_logo.jpeg";
+import the_donovans_venom_logo from "./companies/the_donovans_venom_logo.jpg";
+import netisens from "./companies/Netisens.jpg";
 
 export {
   aimgreen,
   backend,
   cando,
+  favesneedles,
+  heraknow,
+  heraldome,
+  heraldsmeal,
+  heraldsmeet,
+  heraldspay,
+  heralds_store,
+  tulcatiff,
   byteex_logo,
   creator,
   css,
@@ -58,7 +76,9 @@ export {
   fastapi,
   figma,
   git,
+  the_donovans_venom_logo,
   github,
+  netisens,
   html,
   javascript,
   kindocean,
@@ -77,7 +97,7 @@ export {
   quizzical,
   reactjs,
   redux,
-  siktionary,
+  eltionary,
   slog,
   sumz,
   tailwind,

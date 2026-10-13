@@ -1,3 +1,3 @@
-export { default as muhammad } from "./muhammad_testimonial.png";
-export { default as zakaria } from "./zakaria_testimonial.png";
-export { default as sifon } from "./sifon-colored.jpg";
+export { default as muhammad } from "./riches.jpg";
+export { default as zakaria } from "./nsikak.jpg";
+export { default as sifon } from "./rei.jpg";

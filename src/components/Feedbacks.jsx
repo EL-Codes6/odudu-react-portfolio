@@ -12,6 +12,8 @@ const FeedbackCard = ({
   company,
   image,
 }) => {
+  const roleText = [designation, company].filter(Boolean).join(" at ");
+
   return (
     <motion.div
       variants={fadeIn("", "spring", index * 0.5, 0.75)}
@@ -25,9 +27,9 @@ const FeedbackCard = ({
             <p className="text-white font-medium text-[16px]">
               <span className="blue-text-gradient">@</span> {name}
             </p>
-            <p className="mt-1 text-secondary text-[12px]">
-              {designation} at {company}
-            </p>
+            {roleText && (
+              <p className="mt-1 text-secondary text-[12px]">{roleText}</p>
+            )}
           </div>
 
           <img

@@ -48,7 +48,7 @@ const Navbar = () => {
             className="h-6 object-contain"
           />
           <p className="text-white text-left text-[16px] font-light cursor-pointer">
-            Nsikak <span className="sm:inline block">Thomas</span>
+            Odudu <span className="sm:inline block">Essien</span>
           </p>
         </Link>
         <ul className="list-none hidden md:flex flex-row gap-10">
@@ -71,7 +71,7 @@ const Navbar = () => {
                 backgroundColor: "#0A66C2",
                 fontFamily: "SF Pro Text, Helvetica, sans-serif",
               }}
-              href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=dev-sika"
+              href="https://www.linkedin.com/in/odudu-essien-codes/"
               target="_blank"
             >
               <p className="hidden lg:block">Follow on LinkedIn</p>
@@ -83,7 +83,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="https://github.com/sika-007">
+            <a href="https://github.com/EL-Codes6">
               <img src={github} alt="github" className="w-7 h-7" />
             </a>
           </li>
@@ -124,7 +124,7 @@ const Navbar = () => {
               <li>
                 <a
                   className="flex items-center flex-row-reverse gap-1"
-                  href="https://github.com/sika-007"
+                  href="https://github.com/EL-Codes6"
                 >
                   <img src={github} alt="github" className="w-7 h-7" />
                   <p className=" text-secondary font-poppins sm:hover:text-white sm:text-[18px] font-medium">
@@ -135,7 +135,7 @@ const Navbar = () => {
               <li>
                 <a
                   className="flex items-center flex-row-reverse gap-1"
-                  href="https://linkedin.com/in/dev-sika"
+                  href="https://www.linkedin.com/in/odudu-essien-codes/"
                 >
                   <a
                     style={{
@@ -153,7 +153,7 @@ const Navbar = () => {
                       backgroundColor: "#0A66C2",
                       fontFamily: "SF Pro Text, Helvetica, sans-serif",
                     }}
-                    href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=dev-sika"
+                    href="https://www.linkedin.com/in/odudu-essien-codes/"
                     target="_blank"
                   >
                     LinkedIn

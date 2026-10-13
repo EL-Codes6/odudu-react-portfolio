@@ -6,6 +6,7 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../HOC";
 import { slideIn } from "../utilities/motion";
 
+emailjs.init("FclYi4ygV4cASczlo");
 
 const Contact = () => {
 
@@ -13,9 +14,12 @@ const Contact = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    subject: "",
+    number: "",
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [feedback, setFeedback] = useState("");
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -24,39 +28,42 @@ const Contact = () => {
     })
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     
-    if (form.name && form.email && form.message) {
-      setLoading(true);
-      emailjs.send(
-        "service_h03ku4d", 
-        "template_ojr6l25", 
+    if (!Object.values(form).every((value) => value.trim())) {
+      setFeedback("Please complete all fields before sending.");
+      return;
+    }
+
+    setLoading(true);
+    setFeedback("");
+    try {
+      await emailjs.send(
+        "service_fmlyssf",
+        "template_0w2pt7f",
         {
-          form_name: form.name,
-          to_name: "Nsikak",
-          from_email: form.email,
-          to_email: "nsikakthomas102@gmail.com",
-          message: form.message
-        },
-        "EujvNh3ADNbu1LKyV"
-      )
-        .then(() => {
-          setLoading(false)
-          alert("Thanks for reaching out! I will get back to you as soon as possible.")
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          })
-        }, (error) => {
-          setLoading(false)
-          console.log(error)
-          alert("Something went wrong. Please try again later.")
-        })
-    } else {
-      setLoading(false)
-      alert("Please fill in the details correctly")
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
+          number: form.number,
+          message: form.message,
+        }
+      );
+      setFeedback("Message sent successfully. Thank you for reaching out!");
+      setForm({
+        name: "",
+        email: "",
+        subject: "",
+        number: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("EmailJS send failed:", error);
+      const reason = error?.text || error?.message || `HTTP ${error?.status || "unknown error"}`;
+      setFeedback(`Message could not be sent: ${reason}`);
+    } finally {
+      setLoading(false);
     }
   }
  
@@ -68,10 +75,11 @@ const Contact = () => {
 
         <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
           <label className="flex flex-col">
-            <span className="text-white font-">name: </span>
+            <span className="text-white">Name</span>
             <input 
               type="text" 
               name="name" 
+              required
               value={form.name}
               onChange={handleChange}
               placeholder="Name"
@@ -79,10 +87,11 @@ const Contact = () => {
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-">email: </span>
+            <span className="text-white">Email</span>
             <input 
-              type="text" 
+              type="email" 
               name="email" 
+              required
               value={form.email}
               onChange={handleChange}
               placeholder="Email"
@@ -90,10 +99,35 @@ const Contact = () => {
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-">message: </span>
+            <span className="text-white">Subject</span>
+            <input
+              type="text"
+              name="subject"
+              required
+              value={form.subject}
+              onChange={handleChange}
+              placeholder="Subject"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+            />
+          </label>
+          <label className="flex flex-col">
+            <span className="text-white">Phone number</span>
+            <input
+              type="tel"
+              name="number"
+              required
+              value={form.number}
+              onChange={handleChange}
+              placeholder="Phone number"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+            />
+          </label>
+          <label className="flex flex-col">
+            <span className="text-white">Message</span>
             <textarea
               rows={7}
               name="message" 
+              required
               value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
@@ -103,11 +137,12 @@ const Contact = () => {
 
           <button
            type="submit"
-           onSubmit={handleSubmit}
+           disabled={loading}
            className="bg-tertiary py-4 px-8 outline-none w-fit text-white font-bold shadow-md rounded-xl"
           >
             {loading ? "Sending..." : "Send"}
           </button>
+          {feedback && <p role="status" className="text-white">{feedback}</p>}
         </form>
       </motion.div>
 

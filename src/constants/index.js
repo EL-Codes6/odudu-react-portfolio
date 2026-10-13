@@ -12,7 +12,7 @@ import {
   nodejs,
   git,
   next,
-  siktionary,
+  eltionary,
   slog,
   dkg,
   evvent,
@@ -28,7 +28,17 @@ import {
   liquid,
   ef420,
   everse_soft_logo,
-  byteex_logo
+  byteex_logo,
+  the_donovans_venom_logo,
+  netisens,
+  heraknow,
+  favesneedles,
+  heraldome,
+  heraldsmeal,
+  heraldsmeet,
+  heraldspay,
+  heralds_store,
+  tulcatiff,
 } from "../assets";
 import { muhammad, sifon, zakaria } from "../assets/people";
 
@@ -49,7 +59,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Fullstack Web Developer",
+    title: "Frontend Web Developer",
     icon: web,
   },
   {
@@ -121,34 +131,22 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Shopify Plus Developer",
-    company_name: "Everse/Hed Technologies",
-    icon: everse_soft_logo,
+    title: "Frontend Developer",
+    company_name: "The Donovan’s Venom",
+    icon: the_donovans_venom_logo,
     iconBg: "white",
     date: "May 2025 - Present",
     points: [
-      "Built custom discount function that reduced reliance on third-party apps and helped saved about $4000 in monthly app fees.",
-      "Developed a custom logic heavy cart drawer from scratch",
-      "Performed updates, upgrades and stability improvements to legacy code from previous versions of the Dawn theme.",
-      "Implemented permanent fixes to recurring bugs on the live theme.",
-      "Played a key role in decision making for updates and software implementation strategies",
+      "Developed and maintained frontend components to support the organization’s web development initiatives.",
+      "Built responsive user interfaces using modern frontend technologies, focusing on usability and consistency.",
+      "Collaborated with the development team to implement features, resolve UI issues, and improve application functionality.",
+      "Worked with the existing codebase to understand project structure, development workflows, and implementation requirements.",
+      "Contributed to frontend development decisions and collaborated with team members to support ongoing project improvements.",
     ],
   },
   {
-    title: "Shopify Developer",
-    company_name: "Byteex",
-    icon: byteex_logo,
-    iconBg: "white",
-    date: "October, 2024 - February, 2025",
-    points: [
-      "Oversaw the development of e-commerce websites for 3 businesses that contracted Byteex for their product development.",
-      "Built a custom Shopify theme for a business that now has over 30 5-star reviews collected via the Judgeme app.",
-      "Implemented frontend solutions to store logic using HTML, CSS, custom JavaScript solutions and Liquid in a timely fashion.",
-    ],
-  },
-  {
-    title: "Lead Fullstack/Frontend Developer",
-    company_name: "Migro",
+    title: "Frontend Developer",
+    company_name: "Tech-IT Community",
     icon: migro,
     iconBg: "white",
     date: "February, 2024 - May, 2024",
@@ -161,9 +159,9 @@ const experiences = [
     ],
   },
   {
-    title: "Frontend Engineer Intern",
-    company_name: "Evvent As (Norway, Remote)",
-    icon: evvent,
+    title: "Frontend Engineer",
+    company_name: "Netisens ICT (Remote)",
+    icon: netisens,
     iconBg: "white",
     date: "June, 2023 - December, 2023",
     points: [
@@ -177,7 +175,7 @@ const experiences = [
   },
   {
     title: "Frontend Engineer Contractor",
-    company_name: "Deep Knowledge Group (UK, Remote)",
+    company_name: "",
     icon: dkg,
     iconBg: "white",
     date: "September, 2023 - October, 2023",
@@ -191,7 +189,7 @@ const experiences = [
   },
   {
     title: "Frontend Engineer Volunteer",
-    company_name: "United States of Africa (USA, Remote)",
+    company_name: "",
     icon: typescript,
     iconBg: "white",
     date: "June, 2023 - September, 2023",
@@ -223,26 +221,26 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "...One of Nsikak's standout qualities is his creativity and resilience in completing tasks. He would always find a way to tackle problems no matter how difficult they seemed to be. This was very essential to us as a startup.",
-    name: "Zakaria B.",
-    designation: "CTO",
-    company: "Evvent AS",
+      "Working with Odudu as a fellow developer has been an absolute pleasure. His collaborative spirit, technical expertise, and innovative problem-solving make every coding session productive and enjoyable. A true team player who elevates the entire development process!",
+    name: "Nsikak Thomas",
+    designation: "Web Dev, Shopify",
+    company: "",
     image: zakaria,
   },
   {
     testimonial:
-      "Nsikak viewed my design from a fresh angle. In addition to his skill as a front-end developer, Nsikak's disposition boosts the spirit of teamwork. Not to mention that Nsikak is a trustworthy man who gives his all to the tasks he does.",
-    name: "Mohammad N.",
-    designation: "UI/UX Designer",
-    company: "Evvent AS",
+      "The portfolio Odudu built for me has transformed my career as a content writer. Its professional design and intuitive layout perfectly showcase my work, attracting clients and opening doors to exciting opportunities. It's been instrumental in my professional growth!",
+    name: "Riches Essien",
+    designation: "Content Writer",
+    company: "",
     image: muhammad,
   },
   {
     testimonial:
-      "Nsikak was instrumental in enhancing my online reach by helping me build a portfolio website. He exceeded my expectations. I highly recommend him as a Web developer for your project!",
-    name: "Sifon T.",
-    designation: "Top Rated Freelancer",
-    company: "Upwork",
+      "As Odudu's student in the Web Development Course, I was blown away by his teaching style. He makes complex concepts feel approachable and fun, breaking them down step-by-step until everything clicks. His mentorship has given me the skills and confidence to pursue my dreams in web development!",
+    name: "Elisha Franklin",
+    designation: "",
+    company: "",
     image: sifon,
   },
 ];
@@ -251,79 +249,82 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Everything 420",
+    name: "Heralds Store",
     description:
-      "Built a custom cart drawer from scratch, implemented a custom discount functions (not automatic discounts) that have been run 50+ million times in the space of just a month. Also worked on checkout UI extensions and implemented routine fixes and updates.",
+      "A React storefront built for a boutique brand, featuring a polished shopping experience and responsive product presentation.",
     tags: [
       {
-        name: "Shopify Functions",
+        name: "React",
         color: "green-text-gradient",
       },
       {
-        name: "Liquid",
+        name: "JavaScript",
         color: "pink-text-gradient",
       },
       {
-        name: "JavaScript",
+        name: "CSS",
         color: "blue-text-gradient",
       },
     ],
-    image: ef420,
-    live_site_link: "https://www.everything420.com",
+    image: heralds_store,
+    source_code_link: "https://github.com/EL-Codes6/heralds-store",
+    live_site_link: "https://heraldzstore.netlify.app/",
   },
   {
-    name: "Kind Ocean E-commerce Website",
+    name: "Tulcatiff",
     description:
-      "Custom shopify e-commerce website built with liquid, HTML, CSS and custom JavaScript. Over 50+ store 5 star reviews and counting",
+      "A messaging app where users connect through receiver IDs and start private conversations in a focused chat interface.",
     tags: [
       {
-        name: "Shopify",
+        name: "JavaScript",
         color: "pink-text-gradient",
       },
       {
-        name: "Liquid",
+        name: "CSS",
         color: "green-text-gradient",
       },
       {
-        name: "JavaScript",
+        name: "HTML",
         color: "blue-text-gradient",
       },
     ],
-    image: kindocean,
-    live_site_link: "https://www.kindocean.com.au",
+    image: tulcatiff,
+    source_code_link: "https://github.com/EL-Codes6/tulcatiff",
+    live_site_link: "https://tulcatiff.netlify.app/",
   },
   {
-    name: "Aimgreen E-commerce Website",
+    name: "HeraKnow",
     description:
-      "Custom shopify e-commerce website built with liquid, HTML, CSS and custom JavaScript.",
+      "A knowledge-sharing and awareness platform designed to help users discover facts, ideas, and information through a clean interactive web experience.",
     tags: [
       {
-        name: "Shopify",
+        name: "HTML",
         color: "pink-text-gradient",
       },
       {
-        name: "Liquid",
+        name: "JavaScript",
         color: "green-text-gradient",
       },
       {
-        name: "JavaScript",
+        name: "Three.js",
         color: "blue-text-gradient",
       },
     ],
-    image: aimgreen,
-    live_site_link: "https://www.aimgreenbbs.com/",
+    image: heraknow,
+    source_code_link: "https://github.com/EL-Codes6/Heraknow",
+    live_site_link: "https://heraknow.netlify.app/",
   },
   {
-    name: "Mertra Mertra E-commerce Website",
+    name: "Faves Needles",
     description:
-      "Custom shopify e-commerce website built with liquid, HTML, CSS and custom JavaScript.",
+      "A clean, handcrafted fashion brand landing page built with HTML, CSS, and JavaScript.",
     tags: [
       {
-        name: "Shopify",
+        name: "HTML",
         color: "pink-text-gradient",
       },
       {
-        name: "Liquid",
+        name: "CSS",
         color: "green-text-gradient",
       },
       {
@@ -331,8 +332,9 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: mertra,
-    live_site_link: "https://www.mertra.com/",
+    image: favesneedles,
+    source_code_link: "https://github.com/EL-Codes6/Faves-Needles",
+    live_site_link: "https://favesneedle.netlify.app/",
   },
   {
     name: "NextAdmin Dashboard",
@@ -401,7 +403,7 @@ const projects = [
     live_site_link: "https://slog-kappa.vercel.app/",
   },
   {
-    name: "Cando",
+    name: "Can Be Done",
     description:
       "Easy-to-use and functional todo application that works with localStorage for creating, editing, deleting, and sorting to-dos, Or Can-dos as I like to call them, with a cool drag and drop feature",
     tags: [
@@ -419,8 +421,8 @@ const projects = [
       },
     ],
     image: cando,
-    source_code_link: "https://github.com/sika-007/can-do",
-    live_site_link: "https://can-do-app.netlify.app",
+    source_code_link: "https://github.com/EL-Codes6/ICAN-DO",
+    live_site_link: "https://canbedone.netlify.app/",
   },
   /* {
     name: "Sumz",
@@ -489,7 +491,7 @@ const projects = [
       live_site_link: "https://quizzical-application.netlify.app/",
       }, */
   {
-    name: "Siktionary",
+    name: "Eltionary",
     description:
       "A Web application that enables users to search words, their meanings, pronunciations - both audio and written, usage examples, synonyms, antonyms and so much more while providing a very attractive and intuitive user experience.",
     tags: [
@@ -506,9 +508,97 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: siktionary,
-    source_code_link: "https://github.com/sika-007/siktionary",
-    live_site_link: "https://siktionary.netlify.app",
+    image: eltionary,
+    source_code_link: "https://github.com/EL-Codes6/Eltionary",
+    live_site_link: "https://eltionary.netlify.app/",
+  },
+  {
+    name: "HeralDome",
+    description:
+      "A professional construction company website that highlights services, project credibility, and a clean, trustworthy brand experience for modern building businesses.",
+    tags: [
+      {
+        name: "React",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: heraldome,
+    source_code_link: "https://github.com/EL-Codes6/HeralDome",
+    live_site_link: "https://heralddome.netlify.app/",
+  },
+  {
+    name: "Heralds Meal",
+    description:
+      "A modern restaurant website built to showcase signature dishes, dining experience, and a polished food brand identity for a cozy culinary business.",
+    tags: [
+      {
+        name: "React",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: heraldsmeal,
+    source_code_link: "https://github.com/EL-Codes6/heraldsmeal",
+    live_site_link: "https://heraldsmeals.netlify.app/",
+  },
+  {
+    name: "HeraldsMeet",
+    description:
+      "An appointment booking system that simplifies scheduling, service selection, and client coordination for a professional service business.",
+    tags: [
+      {
+        name: "React",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: heraldsmeet,
+    source_code_link: "https://github.com/EL-Codes6/heraldsmeet",
+    live_site_link: "https://heraldsmeet.netlify.app/",
+  },
+  {
+    name: "HeraldsPay",
+    description:
+      "A digital banking platform where users can send and receive money, manage balances, and apply for loans through a clean fintech experience.",
+    tags: [
+      {
+        name: "React",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: heraldspay,
+    source_code_link: "https://github.com/EL-Codes6/heraldspay",
+    live_site_link: "https://heraldspay.netlify.app/",
   },
 ];
 
